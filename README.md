@@ -19,39 +19,35 @@
 ## Код
 ```C
 #include <stdio.h>
+
 int main()
 {
     float a, b, x;
-    printf("Enter a ->");
-    scanf("%f", &a);
-    printf("Enter b ->");
-    scanf("%f", &b);
-    printf("Enter x ->");
-    scanf("%f", &x);
-    float max;
 
-    if (a!=b)
-    {
-        if (a>b)
-            max = a;
-        else
-            max = b;
-        if (max>x)
-            printf("%f - max - x\n",max-x);
-        if (max<x)
-            printf("%f - max + x\n",(a+b-max)+x);
-        if (max==x)
-            printf("%f - a и b равны\n",max=x);
-        }
-    else
-        printf(" - a и b равны\n");
+    printf("Enter a: ");
+    scanf("%f", &a);
+    printf("Enter b: ");
+    scanf("%f", &b);
+    printf("Enter x: ");
+    scanf("%f", &x);
+
+    float max = (a>b)?a:b;
+    float min = (a<b)?a:b;
+
+    if (max>x) {
+        printf("Разность наибольшего параметров и х: %.2fn", max-x);
+    } else if (max<x) {
+        printf("Сумма наименьшего из параметров и х: %.2fn", min+x);
+    } else {
+        printf("Наибольшее из параметров равно х\n");
+    }
     return 0;
 }
 ```
 ## Скриншоты результатов
-![pic 1](pic1/1.png)
+![pic 1](pic1/11.png)
 ## Блок-схема
-![diagrama](pic1/diagram.png)
+![diagrama](pic1/diagram1.png)
 ## Ссылки на используемые ресурсы
 - [Разветвляющиеся алгоритмы. Оператор If](https://informatics.msk.ru/mod/book/view.php?id=533)
 - [Ветвящиеся алгоритмы](https://studfile.net/preview/8896420/page:4/)
